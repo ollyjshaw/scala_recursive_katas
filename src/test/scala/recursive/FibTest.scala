@@ -2,7 +2,7 @@ package recursive
 
 import org.scalatest.{FlatSpec, Matchers}
 
-class FibTest extends FlatSpec with Matchers{
+class FibTest extends FlatSpec with Matchers {
 
   it should "calculate the first fibonacci number" in {
     Fib.generate(0) shouldBe 0
