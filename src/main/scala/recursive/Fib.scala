@@ -3,19 +3,16 @@ package recursive
 import scala.annotation.tailrec
 
 object Fib {
-  def generateTailRec(i: Int):Int = generate(i) //why not
+  def generateTailRec(i: Int) =  generate(i)
 
-  //0,1,1,2,3
-  def generate(i: Int):Int = {
-
-    @tailrec
-    def internal(current: Int, total: Int): Int = current match {
+  def generate(i: Int) = {
+    def fibInternal(i: Int, total: Int) : Int= i match {
       case 0 => total
-      case x => internal(current-1, current + total)
+      case x => fibInternal(x-1, total + x)
     }
 
-    internal(i, 0)
-
+    fibInternal(i, 0)
   }
+
 
 }
